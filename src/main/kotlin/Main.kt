@@ -8,11 +8,11 @@ fun main() {
         val archiveName = archiveMenu.stringCorrect("название архива:")
         archiveList.add(Archive())
         archiveMenu.menuList.add("${archiveMenu.controls.size}. $archiveName")
-        archiveMenu.controls.add(archiveMenu.controls.size.toString() to { note(archiveList[archiveMenu.num.toInt() - 1]) })
+        archiveMenu.controls.add(archiveMenu.controls.size to { note(archiveList[archiveMenu.num - 1]) })
     }
     archiveMenu.start { createArchive() }
 }
 
-class Archive() {
+class Archive {
     val notesList: MutableList<Note> = mutableListOf()
 }
