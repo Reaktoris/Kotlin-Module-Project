@@ -15,4 +15,5 @@ fun main() {
 
 class Archive {
     val notesList: MutableList<Note> = mutableListOf()
+    val notesMenu = MenuHandler("Список заметок\n0. Создать заметку") { main() }
 }
